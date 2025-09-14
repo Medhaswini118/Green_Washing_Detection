@@ -134,6 +134,32 @@ st.sidebar.info(
 # ------------------ INPUT AREA -------------------
 st.markdown("### ✍️ Enter an Environmental Claim")
 user_input = st.text_area("", height=120, placeholder="e.g., Our packaging is 100% eco-friendly and compostable.")
+st.markdown(
+    """
+    <style>
+        /* Make st.error text more visible */
+        .stAlert.stAlert-error {
+            background-color: #ffcdd2 !important;  /* light red background */
+            color: #b71c1c !important;             /* dark red text */
+            font-weight: 600;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+st.markdown(
+    """
+    <style>
+        .stAlert.stAlert-success {
+            background-color: #c8e6c9 !important;  /* light green */
+            color: #1b5e20 !important;             /* dark green text */
+            font-weight: 600;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 
 # ------------------ PREDICT ----------------------
 if st.button("🔍 Analyse Claim"):
